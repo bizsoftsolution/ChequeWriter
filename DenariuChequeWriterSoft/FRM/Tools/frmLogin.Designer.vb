@@ -22,26 +22,26 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Me.pnlMain = New System.Windows.Forms.Panel
-        Me.cbCompanyName = New System.Windows.Forms.ComboBox
-        Me.btnCompany = New System.Windows.Forms.Button
-        Me.txtPassword = New System.Windows.Forms.TextBox
-        Me.lblPassword = New System.Windows.Forms.Label
-        Me.txtUserName = New System.Windows.Forms.TextBox
-        Me.lblUserName = New System.Windows.Forms.Label
-        Me.lblInvalidUserName = New System.Windows.Forms.Label
-        Me.pnlOption = New System.Windows.Forms.Panel
-        Me.Panel3 = New System.Windows.Forms.Panel
-        Me.pboxClose = New System.Windows.Forms.PictureBox
-        Me.pboxRestore = New System.Windows.Forms.PictureBox
-        Me.pboxMinimize = New System.Windows.Forms.PictureBox
-        Me.pboxMaximize = New System.Windows.Forms.PictureBox
-        Me.btnLogin = New System.Windows.Forms.Button
-        Me.lblCompany = New System.Windows.Forms.Label
+        Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.cbCompanyName = New System.Windows.Forms.ComboBox()
+        Me.btnCompany = New System.Windows.Forms.Button()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.txtUserName = New System.Windows.Forms.TextBox()
+        Me.lblUserName = New System.Windows.Forms.Label()
+        Me.lblInvalidUserName = New System.Windows.Forms.Label()
+        Me.pnlOption = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pboxClose = New System.Windows.Forms.PictureBox()
+        Me.pboxRestore = New System.Windows.Forms.PictureBox()
+        Me.pboxMinimize = New System.Windows.Forms.PictureBox()
+        Me.pboxMaximize = New System.Windows.Forms.PictureBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.lblCompany = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.PnlMaster = New System.Windows.Forms.Panel
+        Me.PnlMaster = New System.Windows.Forms.Panel()
         Me.pnlMain.SuspendLayout()
         Me.pnlOption.SuspendLayout()
         Me.Panel3.SuspendLayout()

@@ -22,54 +22,54 @@ Partial Class frmChequeIssueReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmChequeIssueReport))
-        Me.pnlToolBar = New System.Windows.Forms.Panel
-        Me.cmbChequeStatus = New System.Windows.Forms.ComboBox
-        Me.lblChequeStatus = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btnExit = New System.Windows.Forms.Button
-        Me.Panel7 = New System.Windows.Forms.Panel
-        Me.Panel4 = New System.Windows.Forms.Panel
-        Me.rbnInfixBank = New System.Windows.Forms.RadioButton
-        Me.rbnSuffixBank = New System.Windows.Forms.RadioButton
-        Me.rbnPrefixBank = New System.Windows.Forms.RadioButton
-        Me.txtBankName = New System.Windows.Forms.TextBox
-        Me.lblBankName = New System.Windows.Forms.Label
-        Me.Panel5 = New System.Windows.Forms.Panel
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.rbnInfixPayee = New System.Windows.Forms.RadioButton
-        Me.rbnSuffixPayee = New System.Windows.Forms.RadioButton
-        Me.rbnPrefixPayee = New System.Windows.Forms.RadioButton
-        Me.txtPayName = New System.Windows.Forms.TextBox
-        Me.lblPayName = New System.Windows.Forms.Label
-        Me.Panel2 = New System.Windows.Forms.Panel
-        Me.rbnChequeDate = New System.Windows.Forms.RadioButton
-        Me.rbnIssueDate = New System.Windows.Forms.RadioButton
-        Me.txtBillAmountTo = New System.Windows.Forms.TextBox
-        Me.txtBillAmountFrom = New System.Windows.Forms.TextBox
-        Me.lblBillAmount = New System.Windows.Forms.Label
-        Me.dtpChequeDateTo = New System.Windows.Forms.DateTimePicker
-        Me.lblBillDateTo = New System.Windows.Forms.Label
-        Me.dtpChequeDateFrom = New System.Windows.Forms.DateTimePicker
-        Me.lblBillDateFrom = New System.Windows.Forms.Label
-        Me.btnSearch = New System.Windows.Forms.Button
-        Me.Panel6 = New System.Windows.Forms.Panel
-        Me.pnlone = New System.Windows.Forms.Panel
-        Me.rbnInfixCompany = New System.Windows.Forms.RadioButton
-        Me.rbnSuffixCompany = New System.Windows.Forms.RadioButton
-        Me.rbnPrefixCompany = New System.Windows.Forms.RadioButton
-        Me.txtCompanyName = New System.Windows.Forms.TextBox
-        Me.lblCompanyName = New System.Windows.Forms.Label
-        Me.pnlContent = New System.Windows.Forms.Panel
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        Me.lblHeading = New System.Windows.Forms.Label
-        Me.pnlFooter = New System.Windows.Forms.Panel
-        Me.pnlMain = New System.Windows.Forms.Panel
-        Me.pnlHeader = New System.Windows.Forms.Panel
+        Me.pnlToolBar = New System.Windows.Forms.Panel()
+        Me.txtChequeNumber = New System.Windows.Forms.TextBox()
+        Me.lblChequeNumber = New System.Windows.Forms.Label()
+        Me.cmbChequeStatus = New System.Windows.Forms.ComboBox()
+        Me.lblChequeStatus = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.rbnInfixBank = New System.Windows.Forms.RadioButton()
+        Me.rbnSuffixBank = New System.Windows.Forms.RadioButton()
+        Me.rbnPrefixBank = New System.Windows.Forms.RadioButton()
+        Me.txtBankName = New System.Windows.Forms.TextBox()
+        Me.lblBankName = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.rbnInfixPayee = New System.Windows.Forms.RadioButton()
+        Me.rbnSuffixPayee = New System.Windows.Forms.RadioButton()
+        Me.rbnPrefixPayee = New System.Windows.Forms.RadioButton()
+        Me.txtPayName = New System.Windows.Forms.TextBox()
+        Me.lblPayName = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.rbnChequeDate = New System.Windows.Forms.RadioButton()
+        Me.rbnIssueDate = New System.Windows.Forms.RadioButton()
+        Me.txtBillAmountTo = New System.Windows.Forms.TextBox()
+        Me.txtBillAmountFrom = New System.Windows.Forms.TextBox()
+        Me.lblBillAmount = New System.Windows.Forms.Label()
+        Me.dtpChequeDateTo = New System.Windows.Forms.DateTimePicker()
+        Me.lblBillDateTo = New System.Windows.Forms.Label()
+        Me.dtpChequeDateFrom = New System.Windows.Forms.DateTimePicker()
+        Me.lblBillDateFrom = New System.Windows.Forms.Label()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.pnlone = New System.Windows.Forms.Panel()
+        Me.rbnInfixCompany = New System.Windows.Forms.RadioButton()
+        Me.rbnSuffixCompany = New System.Windows.Forms.RadioButton()
+        Me.rbnPrefixCompany = New System.Windows.Forms.RadioButton()
+        Me.txtCompanyName = New System.Windows.Forms.TextBox()
+        Me.lblCompanyName = New System.Windows.Forms.Label()
+        Me.pnlContent = New System.Windows.Forms.Panel()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.lblHeading = New System.Windows.Forms.Label()
+        Me.pnlFooter = New System.Windows.Forms.Panel()
+        Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.lblChequeNumber = New System.Windows.Forms.Label
-        Me.txtChequeNumber = New System.Windows.Forms.TextBox
         Me.pnlToolBar.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -107,6 +107,23 @@ Partial Class frmChequeIssueReport
         Me.pnlToolBar.Name = "pnlToolBar"
         Me.pnlToolBar.Size = New System.Drawing.Size(1019, 133)
         Me.pnlToolBar.TabIndex = 21
+        '
+        'txtChequeNumber
+        '
+        Me.txtChequeNumber.Location = New System.Drawing.Point(796, 13)
+        Me.txtChequeNumber.Name = "txtChequeNumber"
+        Me.txtChequeNumber.Size = New System.Drawing.Size(186, 20)
+        Me.txtChequeNumber.TabIndex = 97
+        '
+        'lblChequeNumber
+        '
+        Me.lblChequeNumber.AutoSize = True
+        Me.lblChequeNumber.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblChequeNumber.Location = New System.Drawing.Point(671, 14)
+        Me.lblChequeNumber.Name = "lblChequeNumber"
+        Me.lblChequeNumber.Size = New System.Drawing.Size(116, 17)
+        Me.lblChequeNumber.TabIndex = 96
+        Me.lblChequeNumber.Text = "Cheque Number"
         '
         'cmbChequeStatus
         '
@@ -538,23 +555,6 @@ Partial Class frmChequeIssueReport
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'lblChequeNumber
-        '
-        Me.lblChequeNumber.AutoSize = True
-        Me.lblChequeNumber.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblChequeNumber.Location = New System.Drawing.Point(671, 14)
-        Me.lblChequeNumber.Name = "lblChequeNumber"
-        Me.lblChequeNumber.Size = New System.Drawing.Size(116, 17)
-        Me.lblChequeNumber.TabIndex = 96
-        Me.lblChequeNumber.Text = "Cheque Number"
-        '
-        'txtChequeNumber
-        '
-        Me.txtChequeNumber.Location = New System.Drawing.Point(796, 13)
-        Me.txtChequeNumber.Name = "txtChequeNumber"
-        Me.txtChequeNumber.Size = New System.Drawing.Size(186, 20)
-        Me.txtChequeNumber.TabIndex = 97
         '
         'frmChequeIssueReport
         '

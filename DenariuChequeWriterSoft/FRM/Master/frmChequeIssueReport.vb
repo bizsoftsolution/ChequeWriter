@@ -107,9 +107,8 @@
         pnlToolBar.Left = l
     End Sub
 
-    
-
     Private Sub txtChequeNumber_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtChequeNumber.KeyPress
         e.KeyChar = NumericCheckwithsingledot(sender, e.KeyChar, False)
     End Sub
+
 End Class

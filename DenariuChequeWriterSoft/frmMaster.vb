@@ -4,8 +4,6 @@ Imports DenariuChequeWriterSoft.My.Resources
 
 Public Class frmMaster
 
-    
-
     Private Sub frmMaster_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         If Me.DialogResult <> Windows.Forms.DialogResult.OK Then
             e.Cancel = True
@@ -212,5 +210,9 @@ Public Class frmMaster
 
     Private Sub ENVELOPESIZEToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ENVELOPESIZEToolStripMenuItem.Click
         FormShow(frmPrintEnvelopeNew)
+    End Sub
+
+    Private Sub PRINTPAYMENTVOUCHERToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PRINTPAYMENTVOUCHERToolStripMenuItem.Click
+        FormShow(frmPaymentVoucher)
     End Sub
 End Class

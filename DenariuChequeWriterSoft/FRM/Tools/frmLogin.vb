@@ -41,8 +41,9 @@
                     frmMaster.BringToFront()
                     IsLogined = True
                     Me.Close()
+
                 Else
-                    lblInvalidUserName.Text = "Invalid   or Password"
+                    lblInvalidUserName.Text = "Invalid UserName or Password"
                 End If
             Else
                 'lblInvalid.Text = "Invalid User"
@@ -159,5 +160,9 @@
 
     Private Sub cbCompanyName_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles cbCompanyName.Enter
         List_Datas(cbCompanyName, db.CompanyDetails.Codes())
+    End Sub
+
+    Private Sub txtUserName_TextChanged(sender As Object, e As EventArgs) Handles txtUserName.TextChanged
+
     End Sub
 End Class
