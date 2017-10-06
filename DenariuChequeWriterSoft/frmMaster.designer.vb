@@ -22,33 +22,34 @@ Partial Class frmMaster
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMaster))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PAYEEREGISTRATIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.BANKREGISTRATIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PRINTCHEQUEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PRINTENVELOPEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ENVELOPEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ENVELOPESIZEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ENVELOPEADDRESSToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.REPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.BackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PAYEEREGISTRATIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ENVELOPEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ENVELOPESIZEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ENVELOPEADDRESSToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BANKREGISTRATIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ENVELOPEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ENVELOPEADDRESSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ENVELOPESIZEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PRINTCHEQUEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PRINTENVELOPEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lbWecomeMsg = New System.Windows.Forms.Label
-        Me.ENVELOPEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ENVELOPEADDRESSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ENVELOPESIZEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.lbWecomeMsg = New System.Windows.Forms.Label()
+        Me.PRINTVOUCHERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -64,46 +65,14 @@ Partial Class frmMaster
         'MasterToolStripMenuItem
         '
         Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
-        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(159, 20)
+        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(161, 20)
         Me.MasterToolStripMenuItem.Text = "COMPANY REGISTRATION"
         '
         'PAYEEREGISTRATIONToolStripMenuItem
         '
         Me.PAYEEREGISTRATIONToolStripMenuItem.Name = "PAYEEREGISTRATIONToolStripMenuItem"
-        Me.PAYEEREGISTRATIONToolStripMenuItem.Size = New System.Drawing.Size(133, 20)
+        Me.PAYEEREGISTRATIONToolStripMenuItem.Size = New System.Drawing.Size(136, 20)
         Me.PAYEEREGISTRATIONToolStripMenuItem.Text = "PAYEE REGISTRATION"
-        '
-        'BANKREGISTRATIONToolStripMenuItem
-        '
-        Me.BANKREGISTRATIONToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem, Me.ENVELOPEToolStripMenuItem1})
-        Me.BANKREGISTRATIONToolStripMenuItem.Name = "BANKREGISTRATIONToolStripMenuItem"
-        Me.BANKREGISTRATIONToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
-        Me.BANKREGISTRATIONToolStripMenuItem.Text = "SETTINGS"
-        '
-        'NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem
-        '
-        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem.Name = "NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem"
-        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
-        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem.Text = "NEW BANK REGISTRATION && ALIGNMENT"
-        '
-        'PrintToolStripMenuItem
-        '
-        Me.PrintToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PRINTCHEQUEToolStripMenuItem, Me.PRINTENVELOPEToolStripMenuItem})
-        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.PrintToolStripMenuItem.Text = "PRINT"
-        '
-        'PRINTCHEQUEToolStripMenuItem
-        '
-        Me.PRINTCHEQUEToolStripMenuItem.Name = "PRINTCHEQUEToolStripMenuItem"
-        Me.PRINTCHEQUEToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.PRINTCHEQUEToolStripMenuItem.Text = "PRINT CHEQUE"
-        '
-        'PRINTENVELOPEToolStripMenuItem
-        '
-        Me.PRINTENVELOPEToolStripMenuItem.Name = "PRINTENVELOPEToolStripMenuItem"
-        Me.PRINTENVELOPEToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.PRINTENVELOPEToolStripMenuItem.Text = "PRINT ENVELOPE"
         '
         'ENVELOPEToolStripMenuItem
         '
@@ -125,44 +94,95 @@ Partial Class frmMaster
         Me.ENVELOPEADDRESSToolStripMenuItem1.Size = New System.Drawing.Size(182, 22)
         Me.ENVELOPEADDRESSToolStripMenuItem1.Text = "ENVELOPE SIZE"
         '
+        'BANKREGISTRATIONToolStripMenuItem
+        '
+        Me.BANKREGISTRATIONToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem, Me.ENVELOPEToolStripMenuItem1})
+        Me.BANKREGISTRATIONToolStripMenuItem.Name = "BANKREGISTRATIONToolStripMenuItem"
+        Me.BANKREGISTRATIONToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.BANKREGISTRATIONToolStripMenuItem.Text = "SETTINGS"
+        '
+        'NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem
+        '
+        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem.Name = "NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem"
+        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
+        Me.NEWBANKREGISTRATIONALIGNMENTToolStripMenuItem.Text = "NEW BANK REGISTRATION && ALIGNMENT"
+        '
+        'ENVELOPEToolStripMenuItem1
+        '
+        Me.ENVELOPEToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENVELOPEADDRESSToolStripMenuItem, Me.ENVELOPESIZEToolStripMenuItem})
+        Me.ENVELOPEToolStripMenuItem1.Name = "ENVELOPEToolStripMenuItem1"
+        Me.ENVELOPEToolStripMenuItem1.Size = New System.Drawing.Size(300, 22)
+        Me.ENVELOPEToolStripMenuItem1.Text = "ENVELOPE"
+        '
+        'ENVELOPEADDRESSToolStripMenuItem
+        '
+        Me.ENVELOPEADDRESSToolStripMenuItem.Name = "ENVELOPEADDRESSToolStripMenuItem"
+        Me.ENVELOPEADDRESSToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ENVELOPEADDRESSToolStripMenuItem.Text = "ENVELOPE ADDRESS"
+        '
+        'ENVELOPESIZEToolStripMenuItem
+        '
+        Me.ENVELOPESIZEToolStripMenuItem.Name = "ENVELOPESIZEToolStripMenuItem"
+        Me.ENVELOPESIZEToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ENVELOPESIZEToolStripMenuItem.Text = "ENVELOPE SIZE"
+        '
+        'PrintToolStripMenuItem
+        '
+        Me.PrintToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PRINTCHEQUEToolStripMenuItem, Me.PRINTVOUCHERToolStripMenuItem, Me.PRINTENVELOPEToolStripMenuItem})
+        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.PrintToolStripMenuItem.Text = "PRINT"
+        '
+        'PRINTCHEQUEToolStripMenuItem
+        '
+        Me.PRINTCHEQUEToolStripMenuItem.Name = "PRINTCHEQUEToolStripMenuItem"
+        Me.PRINTCHEQUEToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
+        Me.PRINTCHEQUEToolStripMenuItem.Text = "PRINT CHEQUE"
+        '
+        'PRINTENVELOPEToolStripMenuItem
+        '
+        Me.PRINTENVELOPEToolStripMenuItem.Name = "PRINTENVELOPEToolStripMenuItem"
+        Me.PRINTENVELOPEToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
+        Me.PRINTENVELOPEToolStripMenuItem.Text = "PRINT ENVELOPE"
+        '
         'REPORTToolStripMenuItem
         '
         Me.REPORTToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem})
         Me.REPORTToolStripMenuItem.Name = "REPORTToolStripMenuItem"
-        Me.REPORTToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.REPORTToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.REPORTToolStripMenuItem.Text = "REPORT"
         '
         'COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem
         '
         Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem.Name = "COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem"
-        Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
         Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem.Text = "CHEQUE ISSUE REPORT"
-        '
-        'ToolsToolStripMenuItem
-        '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackupToolStripMenuItem, Me.RestoreToolStripMenuItem})
-        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
-        Me.ToolsToolStripMenuItem.Text = "TOOLS"
-        Me.ToolsToolStripMenuItem.Visible = False
-        '
-        'BackupToolStripMenuItem
-        '
-        Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
-        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.BackupToolStripMenuItem.Text = "BACKUP"
-        '
-        'RestoreToolStripMenuItem
-        '
-        Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
-        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.RestoreToolStripMenuItem.Text = "RESTORE"
         '
         'LogOutToolStripMenuItem
         '
         Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
         Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.LogOutToolStripMenuItem.Text = "LOG OUT"
+        '
+        'ToolsToolStripMenuItem
+        '
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackupToolStripMenuItem, Me.RestoreToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.ToolsToolStripMenuItem.Text = "TOOLS"
+        Me.ToolsToolStripMenuItem.Visible = False
+        '
+        'BackupToolStripMenuItem
+        '
+        Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
+        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.BackupToolStripMenuItem.Text = "BACKUP"
+        '
+        'RestoreToolStripMenuItem
+        '
+        Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
+        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.RestoreToolStripMenuItem.Text = "RESTORE"
         '
         'EXITToolStripMenuItem
         '
@@ -193,24 +213,11 @@ Partial Class frmMaster
         Me.lbWecomeMsg.TabIndex = 2
         Me.lbWecomeMsg.Visible = False
         '
-        'ENVELOPEToolStripMenuItem1
+        'PRINTVOUCHERToolStripMenuItem
         '
-        Me.ENVELOPEToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENVELOPEADDRESSToolStripMenuItem, Me.ENVELOPESIZEToolStripMenuItem})
-        Me.ENVELOPEToolStripMenuItem1.Name = "ENVELOPEToolStripMenuItem1"
-        Me.ENVELOPEToolStripMenuItem1.Size = New System.Drawing.Size(299, 22)
-        Me.ENVELOPEToolStripMenuItem1.Text = "ENVELOPE"
-        '
-        'ENVELOPEADDRESSToolStripMenuItem
-        '
-        Me.ENVELOPEADDRESSToolStripMenuItem.Name = "ENVELOPEADDRESSToolStripMenuItem"
-        Me.ENVELOPEADDRESSToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.ENVELOPEADDRESSToolStripMenuItem.Text = "ENVELOPE ADDRESS"
-        '
-        'ENVELOPESIZEToolStripMenuItem
-        '
-        Me.ENVELOPESIZEToolStripMenuItem.Name = "ENVELOPESIZEToolStripMenuItem"
-        Me.ENVELOPESIZEToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.ENVELOPESIZEToolStripMenuItem.Text = "ENVELOPE SIZE"
+        Me.PRINTVOUCHERToolStripMenuItem.Name = "PRINTVOUCHERToolStripMenuItem"
+        Me.PRINTVOUCHERToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
+        Me.PRINTVOUCHERToolStripMenuItem.Text = "PRINT CHEQUE WITH VOUCHER"
         '
         'frmMaster
         '
@@ -257,4 +264,5 @@ Partial Class frmMaster
     Friend WithEvents ENVELOPEToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ENVELOPEADDRESSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ENVELOPESIZEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PRINTVOUCHERToolStripMenuItem As ToolStripMenuItem
 End Class

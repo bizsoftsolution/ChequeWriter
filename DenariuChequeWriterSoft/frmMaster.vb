@@ -213,4 +213,8 @@ Public Class frmMaster
     Private Sub ENVELOPESIZEToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ENVELOPESIZEToolStripMenuItem.Click
         FormShow(frmPrintEnvelopeNew)
     End Sub
+
+    Private Sub PRINTVOUCHERToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PRINTVOUCHERToolStripMenuItem.Click
+        FormShow(frmChequeWithVoucher)
+    End Sub
 End Class
