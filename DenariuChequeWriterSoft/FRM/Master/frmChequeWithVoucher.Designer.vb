@@ -306,7 +306,7 @@ Partial Class frmChequeWithVoucher
         'lbChqAmountInWord1
         '
         Me.lbChqAmountInWord1.BackColor = System.Drawing.Color.Transparent
-        Me.lbChqAmountInWord1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbChqAmountInWord1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbChqAmountInWord1.ForeColor = System.Drawing.Color.Black
         Me.lbChqAmountInWord1.Location = New System.Drawing.Point(65, 158)
         Me.lbChqAmountInWord1.Name = "lbChqAmountInWord1"
@@ -545,7 +545,7 @@ Partial Class frmChequeWithVoucher
         'lbChqAmountInWord2
         '
         Me.lbChqAmountInWord2.BackColor = System.Drawing.Color.Transparent
-        Me.lbChqAmountInWord2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbChqAmountInWord2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbChqAmountInWord2.ForeColor = System.Drawing.Color.Black
         Me.lbChqAmountInWord2.Location = New System.Drawing.Point(44, 210)
         Me.lbChqAmountInWord2.Name = "lbChqAmountInWord2"
@@ -598,13 +598,13 @@ Partial Class frmChequeWithVoucher
         Me.ppnlVoucher.ForeColor = System.Drawing.Color.Black
         Me.ppnlVoucher.Location = New System.Drawing.Point(1, 1)
         Me.ppnlVoucher.Name = "ppnlVoucher"
-        Me.ppnlVoucher.Size = New System.Drawing.Size(928, 490)
+        Me.ppnlVoucher.Size = New System.Drawing.Size(928, 552)
         Me.ppnlVoucher.TabIndex = 0
         '
         'llblReceivedBy
         '
         Me.llblReceivedBy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblReceivedBy.Location = New System.Drawing.Point(622, 422)
+        Me.llblReceivedBy.Location = New System.Drawing.Point(622, 499)
         Me.llblReceivedBy.Name = "llblReceivedBy"
         Me.llblReceivedBy.Size = New System.Drawing.Size(107, 23)
         Me.llblReceivedBy.TabIndex = 28
@@ -613,7 +613,7 @@ Partial Class frmChequeWithVoucher
         'llblAuthorisedBy
         '
         Me.llblAuthorisedBy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblAuthorisedBy.Location = New System.Drawing.Point(422, 422)
+        Me.llblAuthorisedBy.Location = New System.Drawing.Point(422, 499)
         Me.llblAuthorisedBy.Name = "llblAuthorisedBy"
         Me.llblAuthorisedBy.Size = New System.Drawing.Size(107, 23)
         Me.llblAuthorisedBy.TabIndex = 27
@@ -622,7 +622,7 @@ Partial Class frmChequeWithVoucher
         'llblApprovedBy
         '
         Me.llblApprovedBy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblApprovedBy.Location = New System.Drawing.Point(236, 422)
+        Me.llblApprovedBy.Location = New System.Drawing.Point(236, 499)
         Me.llblApprovedBy.Name = "llblApprovedBy"
         Me.llblApprovedBy.Size = New System.Drawing.Size(107, 23)
         Me.llblApprovedBy.TabIndex = 26
@@ -631,7 +631,7 @@ Partial Class frmChequeWithVoucher
         'llblAmountRM
         '
         Me.llblAmountRM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblAmountRM.Location = New System.Drawing.Point(73, 415)
+        Me.llblAmountRM.Location = New System.Drawing.Point(73, 492)
         Me.llblAmountRM.Name = "llblAmountRM"
         Me.llblAmountRM.Size = New System.Drawing.Size(107, 23)
         Me.llblAmountRM.TabIndex = 24
@@ -639,7 +639,7 @@ Partial Class frmChequeWithVoucher
         'imgAmount
         '
         Me.imgAmount.BackgroundImage = Global.DenariuChequeWriterSoft.My.Resources.Resources.AmountRM
-        Me.imgAmount.Location = New System.Drawing.Point(29, 395)
+        Me.imgAmount.Location = New System.Drawing.Point(29, 472)
         Me.imgAmount.Name = "imgAmount"
         Me.imgAmount.Size = New System.Drawing.Size(175, 50)
         Me.imgAmount.TabIndex = 25
@@ -647,44 +647,40 @@ Partial Class frmChequeWithVoucher
         '
         'llblAmount2
         '
-        Me.llblAmount2.AutoSize = True
         Me.llblAmount2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblAmount2.Location = New System.Drawing.Point(136, 285)
+        Me.llblAmount2.Location = New System.Drawing.Point(136, 312)
         Me.llblAmount2.Name = "llblAmount2"
-        Me.llblAmount2.Size = New System.Drawing.Size(0, 16)
+        Me.llblAmount2.Size = New System.Drawing.Size(593, 50)
         Me.llblAmount2.TabIndex = 23
         '
         'llblPayFor2
         '
-        Me.llblPayFor2.AutoSize = True
         Me.llblPayFor2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llblPayFor2.Location = New System.Drawing.Point(136, 254)
         Me.llblPayFor2.Name = "llblPayFor2"
-        Me.llblPayFor2.Size = New System.Drawing.Size(0, 16)
+        Me.llblPayFor2.Size = New System.Drawing.Size(593, 50)
         Me.llblPayFor2.TabIndex = 22
         '
         'llblPayTo2
         '
-        Me.llblPayTo2.AutoSize = True
         Me.llblPayTo2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llblPayTo2.Location = New System.Drawing.Point(136, 223)
         Me.llblPayTo2.Name = "llblPayTo2"
-        Me.llblPayTo2.Size = New System.Drawing.Size(0, 16)
+        Me.llblPayTo2.Size = New System.Drawing.Size(593, 16)
         Me.llblPayTo2.TabIndex = 21
         '
         'llblBankName2
         '
-        Me.llblBankName2.AutoSize = True
         Me.llblBankName2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblBankName2.Location = New System.Drawing.Point(136, 316)
+        Me.llblBankName2.Location = New System.Drawing.Point(136, 381)
         Me.llblBankName2.Name = "llblBankName2"
-        Me.llblBankName2.Size = New System.Drawing.Size(0, 16)
+        Me.llblBankName2.Size = New System.Drawing.Size(593, 16)
         Me.llblBankName2.TabIndex = 20
         '
         'imgLine2
         '
         Me.imgLine2.BackColor = System.Drawing.Color.Silver
-        Me.imgLine2.Location = New System.Drawing.Point(29, 378)
+        Me.imgLine2.Location = New System.Drawing.Point(29, 443)
         Me.imgLine2.Name = "imgLine2"
         Me.imgLine2.Size = New System.Drawing.Size(700, 2)
         Me.imgLine2.TabIndex = 19
@@ -694,7 +690,7 @@ Partial Class frmChequeWithVoucher
         '
         Me.llblChequeStatus2.AutoSize = True
         Me.llblChequeStatus2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblChequeStatus2.Location = New System.Drawing.Point(603, 347)
+        Me.llblChequeStatus2.Location = New System.Drawing.Point(603, 412)
         Me.llblChequeStatus2.Name = "llblChequeStatus2"
         Me.llblChequeStatus2.Size = New System.Drawing.Size(0, 16)
         Me.llblChequeStatus2.TabIndex = 18
@@ -702,7 +698,7 @@ Partial Class frmChequeWithVoucher
         'llblChequeStatus1
         '
         Me.llblChequeStatus1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblChequeStatus1.Location = New System.Drawing.Point(478, 347)
+        Me.llblChequeStatus1.Location = New System.Drawing.Point(478, 412)
         Me.llblChequeStatus1.Name = "llblChequeStatus1"
         Me.llblChequeStatus1.Size = New System.Drawing.Size(125, 23)
         Me.llblChequeStatus1.TabIndex = 17
@@ -712,7 +708,7 @@ Partial Class frmChequeWithVoucher
         '
         Me.llblChequeNo2.AutoSize = True
         Me.llblChequeNo2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblChequeNo2.Location = New System.Drawing.Point(358, 347)
+        Me.llblChequeNo2.Location = New System.Drawing.Point(358, 412)
         Me.llblChequeNo2.Name = "llblChequeNo2"
         Me.llblChequeNo2.Size = New System.Drawing.Size(0, 16)
         Me.llblChequeNo2.TabIndex = 16
@@ -720,7 +716,7 @@ Partial Class frmChequeWithVoucher
         'llblChequeNo1
         '
         Me.llblChequeNo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblChequeNo1.Location = New System.Drawing.Point(261, 347)
+        Me.llblChequeNo1.Location = New System.Drawing.Point(261, 412)
         Me.llblChequeNo1.Name = "llblChequeNo1"
         Me.llblChequeNo1.Size = New System.Drawing.Size(97, 23)
         Me.llblChequeNo1.TabIndex = 15
@@ -730,7 +726,7 @@ Partial Class frmChequeWithVoucher
         '
         Me.llblChequeDate2.AutoSize = True
         Me.llblChequeDate2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblChequeDate2.Location = New System.Drawing.Point(136, 347)
+        Me.llblChequeDate2.Location = New System.Drawing.Point(136, 412)
         Me.llblChequeDate2.Name = "llblChequeDate2"
         Me.llblChequeDate2.Size = New System.Drawing.Size(0, 16)
         Me.llblChequeDate2.TabIndex = 14
@@ -739,7 +735,7 @@ Partial Class frmChequeWithVoucher
         '
         Me.llblChequeDate1.AutoSize = True
         Me.llblChequeDate1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblChequeDate1.Location = New System.Drawing.Point(29, 347)
+        Me.llblChequeDate1.Location = New System.Drawing.Point(29, 412)
         Me.llblChequeDate1.Name = "llblChequeDate1"
         Me.llblChequeDate1.Size = New System.Drawing.Size(110, 16)
         Me.llblChequeDate1.TabIndex = 13
@@ -749,7 +745,7 @@ Partial Class frmChequeWithVoucher
         '
         Me.llblBankName1.AutoSize = True
         Me.llblBankName1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblBankName1.Location = New System.Drawing.Point(29, 316)
+        Me.llblBankName1.Location = New System.Drawing.Point(29, 381)
         Me.llblBankName1.Name = "llblBankName1"
         Me.llblBankName1.Size = New System.Drawing.Size(88, 16)
         Me.llblBankName1.TabIndex = 12
@@ -759,7 +755,7 @@ Partial Class frmChequeWithVoucher
         '
         Me.llblAmount1.AutoSize = True
         Me.llblAmount1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblAmount1.Location = New System.Drawing.Point(29, 285)
+        Me.llblAmount1.Location = New System.Drawing.Point(29, 312)
         Me.llblAmount1.Name = "llblAmount1"
         Me.llblAmount1.Size = New System.Drawing.Size(59, 16)
         Me.llblAmount1.TabIndex = 11

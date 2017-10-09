@@ -37,6 +37,7 @@ Partial Class frmMaster
         Me.ENVELOPESIZEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PRINTCHEQUEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PRINTVOUCHERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PRINTENVELOPEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.COMPANYWISECHEQUEISSUEREPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,7 +50,6 @@ Partial Class frmMaster
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lbWecomeMsg = New System.Windows.Forms.Label()
-        Me.PRINTVOUCHERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -139,6 +139,12 @@ Partial Class frmMaster
         Me.PRINTCHEQUEToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
         Me.PRINTCHEQUEToolStripMenuItem.Text = "PRINT CHEQUE"
         '
+        'PRINTVOUCHERToolStripMenuItem
+        '
+        Me.PRINTVOUCHERToolStripMenuItem.Name = "PRINTVOUCHERToolStripMenuItem"
+        Me.PRINTVOUCHERToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
+        Me.PRINTVOUCHERToolStripMenuItem.Text = "PRINT CHEQUE WITH VOUCHER"
+        '
         'PRINTENVELOPEToolStripMenuItem
         '
         Me.PRINTENVELOPEToolStripMenuItem.Name = "PRINTENVELOPEToolStripMenuItem"
@@ -213,12 +219,6 @@ Partial Class frmMaster
         Me.lbWecomeMsg.TabIndex = 2
         Me.lbWecomeMsg.Visible = False
         '
-        'PRINTVOUCHERToolStripMenuItem
-        '
-        Me.PRINTVOUCHERToolStripMenuItem.Name = "PRINTVOUCHERToolStripMenuItem"
-        Me.PRINTVOUCHERToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
-        Me.PRINTVOUCHERToolStripMenuItem.Text = "PRINT CHEQUE WITH VOUCHER"
-        '
         'frmMaster
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -231,7 +231,7 @@ Partial Class frmMaster
         Me.KeyPreview = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMaster"
-        Me.Text = "ChequeWritePro V1.0"
+        Me.Text = "ChequeWritePro V1.1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

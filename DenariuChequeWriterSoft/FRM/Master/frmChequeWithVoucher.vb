@@ -450,27 +450,34 @@ Public Class frmChequeWithVoucher
     End Function
 
     Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        ChequePrintPage(e.Graphics)
+        'e.Graphics.DrawImage(PanelToImg(pnlParent), 10, 10)
+        'e.Graphics.DrawImage(PanelToImg(ppnlVoucher), 10, 50 + imgChequePreview.Height)
+    End Sub
 
-        Dim PrintPage As System.Drawing.Graphics = e.Graphics
+    Sub ChequePrintPage(PrintPage As System.Drawing.Graphics)
         Dim fnt As New Font("Arial", 12, FontStyle.Regular)
         Dim PrintBrush As System.Drawing.Brush
         PrintBrush = Brushes.DarkRed
 
         Dim dv As New DataView
+        Dim cwLeft, cwTop As Integer
+        cwLeft = 50
+        cwTop = 50
         dv = db.Bank.Grid("ChqWidth,ChqHeight,RPTNameLeft,RPTNameTop,RPTAmountLeft,RPTAmountTop,RPTDateLeft,RPTDateTop,RPTWordsLeft,RPTWordsTop", String.Format("BankName='{0}'", txtBankName.Text))
         Dim dd1Left, dd1Top, dd2Left, dd2Top, mm1Left, mm1Top, mm2Left, mm2Top, yy1Left, yy1Top, yy2Left, yy2Top As Integer
         Dim ddSpace As Integer = 30
 
 
 
-        dd1Left = Val(UnitConversion(dv.Item(0)("RPTDateLeft").ToString(), Units.MilliMeter, Units.Pixel))
+        dd1Left = cwLeft + Val(UnitConversion(dv.Item(0)("RPTDateLeft").ToString(), Units.MilliMeter, Units.Pixel))
         dd2Left = dd1Left + (ddSpace * 1)
         mm1Left = dd1Left + (ddSpace * 2)
         mm2Left = dd1Left + (ddSpace * 3)
         yy1Left = dd1Left + (ddSpace * 4)
         yy2Left = dd1Left + (ddSpace * 5)
 
-        dd1Top = Val(UnitConversion(dv.Item(0)("RPTDateTop").ToString(), Units.MilliMeter, Units.Pixel))
+        dd1Top = cwTop + Val(UnitConversion(dv.Item(0)("RPTDateTop").ToString(), Units.MilliMeter, Units.Pixel))
         dd2Top = dd1Top
         mm1Top = dd1Top
         mm2Top = dd1Top
@@ -480,14 +487,14 @@ Public Class frmChequeWithVoucher
 
         Dim nameLeft, nameTop, AmountLeft, AmountTop, AmountInWordLeft, AmountInWordTop As Integer
 
-        nameLeft = Val(UnitConversion(dv.Item(0)("RPTNameLeft").ToString(), Units.MilliMeter, Units.Pixel))
-        nameTop = Val(UnitConversion(dv.Item(0)("RPTNameTop").ToString(), Units.MilliMeter, Units.Pixel))
+        nameLeft = cwLeft + Val(UnitConversion(dv.Item(0)("RPTNameLeft").ToString(), Units.MilliMeter, Units.Pixel))
+        nameTop = cwTop + Val(UnitConversion(dv.Item(0)("RPTNameTop").ToString(), Units.MilliMeter, Units.Pixel))
 
-        AmountLeft = Val(UnitConversion(dv.Item(0)("RPTAmountLeft").ToString(), Units.MilliMeter, Units.Pixel))
-        AmountTop = Val(UnitConversion(dv.Item(0)("RPTAmountTop").ToString(), Units.MilliMeter, Units.Pixel))
+        AmountLeft = cwLeft + Val(UnitConversion(dv.Item(0)("RPTAmountLeft").ToString(), Units.MilliMeter, Units.Pixel))
+        AmountTop = cwTop + Val(UnitConversion(dv.Item(0)("RPTAmountTop").ToString(), Units.MilliMeter, Units.Pixel))
 
-        AmountInWordLeft = Val(UnitConversion(dv.Item(0)("RPTWordsLeft").ToString(), Units.MilliMeter, Units.Pixel))
-        AmountInWordTop = Val(UnitConversion(dv.Item(0)("RPTWordsTop").ToString(), Units.MilliMeter, Units.Pixel))
+        AmountInWordLeft = cwLeft + Val(UnitConversion(dv.Item(0)("RPTWordsLeft").ToString(), Units.MilliMeter, Units.Pixel))
+        AmountInWordTop = cwTop + Val(UnitConversion(dv.Item(0)("RPTWordsTop").ToString(), Units.MilliMeter, Units.Pixel))
 
 
         With PrintPage
@@ -495,8 +502,8 @@ Public Class frmChequeWithVoucher
                 .RotateTransform(Val(TextBox1.Text))
                 .TranslateTransform(Val(TextBox2.Text), Val(TextBox3.Text))
             End If
-            .DrawImage(imgChequePreview.Image, 10, 10)
-            .DrawImage(PanelToImg(ppnlVoucher), 10, imgChequePreview.Height + 50)
+            .DrawImage(imgChequePreview.Image, cwLeft, cwTop)
+            .DrawImage(PanelToImg(ppnlVoucher), cwLeft - 20, imgChequePreview.Height + cwTop + 50)
             '.DrawRectangle(Pens.Red, 0, 0, CInt(Val(UnitConversion(dv.Item(0)("ChqWidth").ToString(), Units.MilliMeter, Units.Pixel))), CInt(Val(UnitConversion(dv.Item(0)("ChqHeight").ToString(), Units.MilliMeter, Units.Pixel))))
             If ckbdate.Checked = True Then
                 .DrawString(txtChqD1.Text, txtChqD1.Font, New System.Drawing.SolidBrush(txtChqD1.ForeColor), dd1Left, dd1Top)
@@ -1016,6 +1023,8 @@ Public Class frmChequeWithVoucher
     Private Sub txtVoucherNoNew_TextChanged(sender As Object, e As EventArgs) Handles txtVoucherNoNew.TextChanged
         llblNo2.Text = txtVoucherNoNew.Text
     End Sub
+
+
 
     Private Sub ckbamount_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ckbamount.CheckedChanged
         If ckbamount.Checked = True Then

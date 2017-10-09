@@ -30,8 +30,8 @@ Public Class frmCompanyDetails
             MsgBox(txtCompanyName.Text & " Already Exist")
             txtCompanyName.Focus()
             RValue = False
-        ElseIf tb.State = "New" And Val(db.CompanyDetails.Data("isnull(Count(*),0)")) >= 3 Then
-            MsgBox("Could Not Create More Than Three Companies. Please Contact Denariusoft Admin", MsgBoxStyle.OkOnly, "ChequeWritePro v1.0")
+        ElseIf tb.State = "New" And Val(db.CompanyDetails.Data("isnull(Count(*),0)")) >= 1 Then
+            MsgBox("Could Not Create More Than One Company. Please Contact Denariusoft Admin", MsgBoxStyle.OkOnly, "ChequeWritePro v1.0")
             txtCompanyName.Focus()
             RValue = False
         ElseIf txtUserName.Text.Trim() = "" Then
