@@ -570,6 +570,7 @@
     <None Include="Resources\setup screen_F.png" />
     <None Include="Resources\setup screen F.png" />
     <None Include="Resources\splash screen ver 1.1.jpg" />
+    <None Include="Resources\AmountRM.PNG" />
     <Content Include="RulerControl.dll" />
     <None Include="Resources\company_321.png" />
     <None Include="Resources\payee_32.png" />

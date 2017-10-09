@@ -39,7 +39,25 @@ Public Class frmChequeWithVoucher
         lbChqAmountInWord1.Text = ""
         List_Datas(txtBankName, db.Bank.Codes())
         List_Datas(txtPayeeName, db.Payee.Column("PayeeName", String.Format("CompanyID='{0}'", db.CompanyDetails.IdByCode(CompName))))
+        ckbIsRotate90Degree.Checked = True
+        ckbIsRotate90Degree.Visible = False
+        SetCompanyAddress()
 
+    End Sub
+
+    Sub SetCompanyAddress()
+        Dim arr As New ArrayList()
+        arr = db.CompanyDetails.Row("*", String.Format("CompanyName='{0}'", CompName))
+        llblVoucherCompanyName.Text = arr(1)
+        llblCompanyAddress.Text = String.Format("{1}{0}{2}{0}Phone : {3} Mobile : {4}{0}EMail Id : {5}", vbCrLf, arr(2), arr(3), arr(4), arr(5), arr(6))
+
+
+        Dim img_buffer() As Byte
+        img_buffer = CType(arr(8), Byte())
+        Dim img_stream As New MemoryStream(img_buffer, True)
+        img_stream.Write(img_buffer, 0, img_buffer.Length)
+        imgLogo.BackgroundImage = New Bitmap(img_stream)
+        img_stream.Close()
     End Sub
 
     Private Sub frmMain_Resize(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Resize
@@ -305,7 +323,7 @@ Public Class frmChequeWithVoucher
             txtChqM2.Visible = True
             txtChqY1.Visible = True
             txtChqY2.Visible = True
-
+            llblBankName2.Text = txtBankName.Text
         Catch ex As Exception
 
         End Try
@@ -334,10 +352,13 @@ Public Class frmChequeWithVoucher
 
     Private Sub txtInpAmount_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtChqAmount.TextChanged
         lbChqAmountInWord1.Text = Number_to_Word.ConvertCurrencyToEnglish(txtChqAmount.Text)
+        llblAmount2.Text = lbChqAmountInWord1.Text
+        llblAmountRM.Text = txtChqAmount.Text
         lbChqAmountInWord1.Text = "** " + lbChqAmountInWord1.Text.ToUpper() + " **"
         Dim NoOfChar As Integer = 45
         Dim Str1, Str2 As String
         lbChqAmountInWord2.Text = ""
+
         If lbChqAmountInWord1.Text.Length > NoOfChar Then
             Str1 = lbChqAmountInWord1.Text.Substring(0, Mid(lbChqAmountInWord1.Text, 1, NoOfChar).LastIndexOf(" "))
             Str2 = lbChqAmountInWord1.Text.Substring(Mid(lbChqAmountInWord1.Text, 1, NoOfChar).LastIndexOf(" "))
@@ -355,12 +376,15 @@ Public Class frmChequeWithVoucher
         txtChqY1.Text = (dtpDate.Value.Year Mod 100) \ 10
         txtChqY2.Text = Val(dtpDate.Value.Year) Mod 10
 
+        llblChequeDate2.Text = String.Format("{0:dd/MM/yyyy}", dtpDate.Value)
+
     End Sub
 
     Private Sub PayeeName_SelectedInd(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtPayeeName.TextChanged
 
         Try
             txtChqName.Text = txtPayeeName.Text
+            llblPayTo2.Text = txtPayeeName.Text
         Catch ex As Exception
 
         End Try
@@ -409,6 +433,22 @@ Public Class frmChequeWithVoucher
 
     End Sub
 
+    Function PanelToImg(pnl As Panel) As Bitmap
+        Dim ds = pnl.Dock
+        For I As Int32 = pnl.Controls.Count - 1 To 0 Step -1
+            pnl.Controls(I).SendToBack()
+        Next
+        pnl.Dock = DockStyle.None
+        Dim bmp = New Bitmap(pnl.Width, pnl.Height)
+        pnl.Refresh()
+        pnl.DrawToBitmap(bmp, New Rectangle(0, 0, pnl.Width, pnl.Height))
+        pnl.Dock = ds
+        For I As Int32 = pnl.Controls.Count - 1 To 0 Step -1
+            pnl.Controls(I).SendToBack()
+        Next
+        Return bmp
+    End Function
+
     Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
 
         Dim PrintPage As System.Drawing.Graphics = e.Graphics
@@ -456,6 +496,7 @@ Public Class frmChequeWithVoucher
                 .TranslateTransform(Val(TextBox2.Text), Val(TextBox3.Text))
             End If
             .DrawImage(imgChequePreview.Image, 10, 10)
+            .DrawImage(PanelToImg(ppnlVoucher), 10, imgChequePreview.Height + 50)
             '.DrawRectangle(Pens.Red, 0, 0, CInt(Val(UnitConversion(dv.Item(0)("ChqWidth").ToString(), Units.MilliMeter, Units.Pixel))), CInt(Val(UnitConversion(dv.Item(0)("ChqHeight").ToString(), Units.MilliMeter, Units.Pixel))))
             If ckbdate.Checked = True Then
                 .DrawString(txtChqD1.Text, txtChqD1.Font, New System.Drawing.SolidBrush(txtChqD1.ForeColor), dd1Left, dd1Top)
@@ -956,10 +997,27 @@ Public Class frmChequeWithVoucher
         End If
     End Sub
 
+    Private Sub txtChequeNo_TextChanged(sender As Object, e As EventArgs) Handles txtChequeNo.TextChanged
+        llblChequeNo2.Text = txtChequeNo.Text
+    End Sub
+
+    Private Sub cmbChequeStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbChequeStatus.SelectedIndexChanged
+        llblChequeStatus2.Text = cmbChequeStatus.Text
+    End Sub
+
+    Private Sub dtpIssueDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpIssueDate.ValueChanged
+        llblDate2.Text = String.Format("{0:dd/MM/yyyy}", dtpIssueDate.Value)
+    End Sub
+
+    Private Sub txtParticulars_TextChanged(sender As Object, e As EventArgs) Handles txtParticulars.TextChanged
+        llblPayFor2.Text = txtParticulars.Text
+    End Sub
+
+    Private Sub txtVoucherNoNew_TextChanged(sender As Object, e As EventArgs) Handles txtVoucherNoNew.TextChanged
+        llblNo2.Text = txtVoucherNoNew.Text
+    End Sub
+
     Private Sub ckbamount_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ckbamount.CheckedChanged
-
-
-
         If ckbamount.Checked = True Then
             txtChqAmount.ForeColor = Color.Black
             lbChqAmountInWord1.ForeColor = Color.Black
@@ -973,8 +1031,5 @@ Public Class frmChequeWithVoucher
     End Sub
 
 
-    Private Sub frmPrintCheque_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-
-    End Sub
 
 End Class

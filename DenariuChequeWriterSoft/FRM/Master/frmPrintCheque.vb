@@ -156,7 +156,7 @@ Public Class frmPrintCheque
         ds.Tables.Add(DTPrint)
         ds.Tables.Add(DTCompany)
 
-     
+
 
         ReportPrint("cryVoucher.rpt", ds, Nothing, PrintDialog1.PrinterSettings.PrinterName)
     End Sub
@@ -227,7 +227,7 @@ Public Class frmPrintCheque
         End If
         txtVoucherNoNew.Text = VNO
 
-        
+
     End Sub
 
     Private Sub BankName_Selected(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBankName.Leave
@@ -320,8 +320,8 @@ Public Class frmPrintCheque
     End Sub
     Private Sub txtChqAmount_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtChqAmount.KeyDown
         Select Case e.KeyCode
-            Case Keys.D0 To Keys.D9, Keys.NumPad0 To Keys.NumPad9, _
-                    Keys.OemPeriod, Keys.Decimal, Keys.Back, Keys.Delete, _
+            Case Keys.D0 To Keys.D9, Keys.NumPad0 To Keys.NumPad9,
+                    Keys.OemPeriod, Keys.Decimal, Keys.Back, Keys.Delete,
                     Keys.Left, Keys.Right
                 If e.Shift = True Then
                     e.SuppressKeyPress = True
@@ -395,7 +395,7 @@ Public Class frmPrintCheque
         Catch ex As Exception
 
         End Try
-       
+
     End Sub
 
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
@@ -422,7 +422,7 @@ Public Class frmPrintCheque
         Dim dd1Left, dd1Top, dd2Left, dd2Top, mm1Left, mm1Top, mm2Left, mm2Top, yy1Left, yy1Top, yy2Left, yy2Top As Integer
         Dim ddSpace As Integer = 30
 
-        
+
 
         dd1Left = Val(UnitConversion(dv.Item(0)("RPTDateLeft").ToString(), Units.MilliMeter, Units.Pixel))
         dd2Left = dd1Left + (ddSpace * 1)

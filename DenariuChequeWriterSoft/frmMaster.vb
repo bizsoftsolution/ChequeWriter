@@ -45,7 +45,7 @@ Public Class frmMaster
         Else
             Me.BackgroundImage = Nothing
         End If
-        FormShow(frmPrintCheque)
+        FormShow(frmChequeWithVoucher)
 
         'Dim f As New frmPrintCheque
         'f.MdiParent = Me
